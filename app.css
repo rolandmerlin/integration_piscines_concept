@@ -1,0 +1,349 @@
+:root {
+    --cdark:#4c5267;
+    --cgray:#f0f1f4;
+    --chover:#6986c2;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.header {
+    width:100%;
+    height:710px;
+    background-image: url(./images/piscine-concept-slide-1.jpg);
+    background-size: cover;
+}
+.nav {
+    position:fixed;
+    height:120px;
+    display:grid;
+    grid-template-columns:120px 210px;
+    z-index:999;
+}
+.nav>* {
+    height:120px;
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hanb {
+    background-color:var(--cdark);
+}
+.hanb hr {
+    border-width:0;
+    border-bottom:1px solid white;
+    width:24px;
+    margin-bottom:5px;
+}
+.hanb hr:last-child {
+    margin:0;
+}
+.contact {
+    position:fixed;
+    top:0;
+    right:0;
+    width:295px;
+    height:60px;
+    background-color: var(--cdark);
+    color:white;
+    line-height: 20px;
+    text-align:center;
+    font-family: sans-serif;
+    font-size:0.9rem;
+    z-index: 1000;
+}
+.contactEl { position: relative;width:0; }
+.contactEl::before {
+    position:absolute;
+    left:100%;
+    top:20px;
+    content:"";
+    height:20px;
+    display:inline-block;
+    border-right:1px solid white;
+}
+.contact--tel {
+    padding:20px;
+    width:140px;
+    height:60px;
+    display:inline-block;
+}
+.contact--devis {
+    margin-left:-3px;
+    padding:20px;
+    display:inline-block;
+    height:60px;
+    width:151px;
+    font-weight: bold;
+}
+.contact--devis:hover, .contact--tel:hover {
+    background-color: var(--chover);
+}
+.header--text {
+    width:1120px;
+    position:absolute;
+    top:450px;
+    left:50%;
+    transform: translateX(-50%);
+    color:white;
+    text-align:right;
+    font-size:66px;
+}
+.piscineConcept {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    height:650px;
+}
+.piscineConcept .showroom {
+    background-image: url('./images/showroom.jpg');
+    background-size:cover;
+    background-position: center center;
+    object-fit: cover;
+}
+.piscineConcept>div {
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+.piscineConcept span {
+    width:636px;
+    display: inline-block;
+    font-weight:100;
+}
+.piscineConcept h1 { font-size:45px; }
+.piscineConcept h3 { font-size:14px; line-height:1.5rem; }
+
+.gridObject {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    height:610px;
+    font-size:34px;
+}
+.icon {
+    display: inline-block;
+    width:120px;
+    height:120px;
+    border:1px solid white;
+    border-radius:50%;
+}
+.light .icon { border-color: black; color:black; }
+.icon--piscine, .icon--amenagement-exterieur, .icon-garden, .icon-pergolas {
+    position: relative;
+}
+.icon--piscine::before {
+    content:'\e917';
+    position: absolute;
+    top:calc(50% - 17px);
+    left:calc(50% - 17px);
+    display: inline-block;
+    color:white;
+}
+.icon--amenagement-exterieur:before {
+    content: "\e900";
+    position: absolute;
+    color:white;
+    top:calc(50% - 17px);
+    left:calc(50% - 17px);
+    display: inline-block;
+}
+.icon-pergolas:before {
+    content: "\e916";
+    position: absolute;
+    color:black;
+    top:calc(50% - 17px);
+    left:calc(50% - 17px);
+    display: inline-block;
+}
+.icon-garden:before {
+    content: "\e90f";
+    position: absolute;
+    color:black;
+    top:calc(50% - 17px);
+    left:calc(50% - 17px);
+    display: inline-block;
+}
+
+.dark, .dark * {
+    background-color: var(--cdark);
+    color:white;
+}
+.light {
+    background-color: var(--cgray);
+    color:black;
+}
+.go { 
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    color:black;
+}
+.go>span {
+    width: 407px;
+    height:334px;
+}
+.mw720 { max-width: 720px; }
+.gflex { 
+    display:grid;
+    grid-template-columns:150px auto;
+}
+.gflex>* {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height:120px;
+}
+.video {
+    min-width:100%;
+    height:550px;   
+    position: relative;
+    overflow: hidden;
+}
+.video video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    -ms-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
+}
+a.button {
+    display:inline-block;
+    text-align: center;
+    width: 125px;
+    height: 44px;
+    line-height: 44px;
+    border:2px solid black;
+    position: relative;
+    font-size:12px;
+    color:black;
+    text-decoration: none;
+}
+a.button::before {
+    content:'';
+    border:1px solid black;
+    width:100%;
+    height:100%;
+    position: absolute;
+    transition:all 0.3s linear;
+    left:-1px;
+    top:-1px;
+}
+a.button:hover::before, .lastactu:hover a.button::before {
+    left:4px;
+    top:4px;
+}
+.actu {
+    background-color:var(--cgray);
+    position: relative;
+    padding-left:80px;
+    padding-right:80px;
+    margin:150px auto 0 auto;
+    max-width:1600px;
+    padding-top:150px;
+}
+.actu--title {
+    position: absolute;
+    font-size:45px;
+    top:-30px;
+   
+}
+.actu--grid {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+}
+.lastactu {
+    padding-left:20px;
+    padding-right:20px;
+    margin:40px;
+    position: relative;
+}
+.lastactu::after {
+    position: absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    border:2px solid white;
+}
+.lastactu:hover::after {
+    top:10px;
+    left:10px;
+}
+.actu--date, .f {
+    line-height: 34px;
+    height: 34px;
+    font-size:19px;
+    position:relative;
+}
+.actu--date::before, .f::before {
+    position: absolute;
+    top:15px;
+    left:-23px;
+    content:"";
+    display: inline-block;
+    width:14px;
+    height:1px;
+    border-bottom:1px solid black;
+}
+.f { font-size:12px; }
+.f::before {
+    border-color:white;
+    top:6px;
+    left:-20px;
+    width:11px;
+}
+.actus--title {
+    text-transform: uppercase;
+    display: inline-block;
+    height:72px;
+    text-align: justify;
+}
+
+.footer {
+    background-image:url(/images/piscine-footer.jpg);
+    background-position: center;
+    background-size: cover;
+    color:white;
+    font-size:11px;
+}
+.footer--wrapper {
+    background-color:rgba(76, 82, 103, 0.9);
+    padding:100px 20px;    
+}
+.footer--wrapper>div {
+    display:grid;
+    grid-template-columns: repeat(3,1fr);
+    max-width:1200px;
+    margin:0 auto;
+
+}
+.footer-contact, .footer--presta, .footer--presta2 {
+    padding:40px;
+}
+.icon--download:before {
+    content '\e90a';
+    font-family: 'piscines-concept';
+}
+.icon--telephone:before {
+    content '\e906';
+    font-family: 'piscines-concept';
+}
+.icon--mail:before {
+    content: '\e902';
+    font-family: 'piscines-concept';
+}
+span.button {
+    display: inline-block;
+    border:1px solid white;
+    padding:10px 20px;
+    font-size:11px;
+}
+a {
+    text-decoration: none;
+    color:inherit;
+}

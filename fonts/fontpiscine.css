@@ -1,0 +1,27 @@
+@font-face {
+    font-family: 'piscines-concept';
+    src:    url('../fonts/piscines-concept.eot?7rlutl');
+    src:    url('../fonts/piscines-concept.eot?7rlutl#iefix') format('embedded-opentype'),
+        url('../fonts/piscines-concept.ttf?7rlutl') format('truetype'),
+        url('../fonts/piscines-concept.woff?7rlutl') format('woff'),
+        url('../fonts/piscines-concept.svg?7rlutl#piscines-concept') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"], .font-icon {
+    font-family: 'piscines-concept' !important;
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+* { font-family: 'Open sans',sans-serif; }
+h1, .pc-font { font-family: 'piscines-concept', sans-serif; }
+h2, .bl-font { font-family: 'serif'; }
+.fs45 { font-size:45px; }
